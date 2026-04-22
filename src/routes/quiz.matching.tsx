@@ -71,7 +71,7 @@ function MatchingQuiz() {
 
   if (finished) {
     return (
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <ScoreCard score={correct} total={attempts} onRestart={restart} />
       </div>
     );
@@ -92,16 +92,16 @@ function MatchingQuiz() {
   };
 
   return (
-    <div className="container mx-auto px-6 py-10 max-w-3xl">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="font-display text-2xl md:text-3xl font-bold">Moslashtiring</h1>
+    <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 max-w-3xl">
+      <div className="flex items-center justify-between mb-4 sm:mb-6">
+        <h1 className="font-display text-xl sm:text-2xl md:text-3xl font-bold">Moslashtiring</h1>
         <span className="text-sm text-muted-foreground">
           {matched.size} / {pairs.length} topildi
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-4">
-        <div className="space-y-3">
+      <div className="grid grid-cols-2 gap-2 sm:gap-4">
+        <div className="space-y-2 sm:space-y-3">
           <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground px-2">
             Inglizcha
           </div>
@@ -114,7 +114,7 @@ function MatchingQuiz() {
                 key={v.base}
                 onClick={() => onPickEn(v.base)}
                 disabled={isMatched}
-                className={`w-full p-4 rounded-xl border-2 font-display font-semibold text-left transition-all flex items-center justify-between ${cellState(isMatched, isSelected, isWrong)}`}
+                className={`w-full p-3 sm:p-4 rounded-xl border-2 font-display font-semibold text-left text-sm sm:text-base transition-all flex items-center justify-between ${cellState(isMatched, isSelected, isWrong)}`}
               >
                 <span>{v.base}</span>
                 {isMatched && <Check className="w-4 h-4" />}
@@ -123,7 +123,7 @@ function MatchingQuiz() {
           })}
         </div>
 
-        <div className="space-y-3">
+        <div className="space-y-2 sm:space-y-3">
           <div className="text-xs font-semibold uppercase tracking-wider text-muted-foreground px-2">
             O'zbekcha
           </div>
@@ -136,7 +136,7 @@ function MatchingQuiz() {
                 key={v.uz}
                 onClick={() => onPickUz(v.uz)}
                 disabled={isMatched}
-                className={`w-full p-4 rounded-xl border-2 font-medium text-left transition-all flex items-center justify-between ${cellState(isMatched, isSelected, isWrong)}`}
+                className={`w-full p-3 sm:p-4 rounded-xl border-2 font-medium text-left text-sm sm:text-base transition-all flex items-center justify-between ${cellState(isMatched, isSelected, isWrong)}`}
               >
                 <span>{v.uz}</span>
                 {isMatched && <Check className="w-4 h-4" />}

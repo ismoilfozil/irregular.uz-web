@@ -1,5 +1,5 @@
 import { Link, Outlet, useLocation } from "@tanstack/react-router";
-import { BookOpen, GraduationCap, Sparkles } from "lucide-react";
+import { BookOpen, GraduationCap, MessageCircle, Sparkles } from "lucide-react";
 
 const navItems = [
   { to: "/", label: "Asosiy" },
@@ -13,7 +13,7 @@ export function SiteLayout() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
       <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/75 border-b border-border/60">
-        <div className="container mx-auto px-6 h-16 flex items-center justify-between">
+        <div className="container mx-auto px-4 sm:px-6 h-14 sm:h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 group">
             <div className="w-9 h-9 rounded-xl bg-gradient-hero flex items-center justify-center shadow-glow group-hover:scale-105 transition-transform">
               <Sparkles className="w-5 h-5 text-primary-foreground" />
@@ -53,7 +53,7 @@ export function SiteLayout() {
             Mashq qilish
           </Link>
 
-          <nav className="md:hidden flex items-center gap-2">
+          <nav className="md:hidden flex items-center gap-1">
             {navItems.map((item) => {
               const isActive =
                 item.to === "/"
@@ -63,8 +63,8 @@ export function SiteLayout() {
                 <Link
                   key={item.to}
                   to={item.to}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-full ${
-                    isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground"
+                  className={`px-3 py-1.5 text-xs font-medium rounded-full transition-colors ${
+                    isActive ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"
                   }`}
                 >
                   {item.label}
@@ -80,12 +80,23 @@ export function SiteLayout() {
       </main>
 
       <footer className="border-t border-border/60 py-8 mt-16">
-        <div className="container mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
+        <div className="container mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
           <div className="flex items-center gap-2">
             <BookOpen className="w-4 h-4" />
             <span>Ingliz tilidagi noto'g'ri fe'llarni yodlash uchun platforma</span>
           </div>
-          <span>© {new Date().getFullYear()} Irregular.uz</span>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://t.me/ismoilfozil"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Fikr bildirish
+            </a>
+            <span>© {new Date().getFullYear()} Irregular.uz</span>
+          </div>
         </div>
       </footer>
     </div>

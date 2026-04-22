@@ -56,14 +56,14 @@ function MultipleChoice() {
 
   if (finished) {
     return (
-      <div className="container mx-auto px-6 py-12">
+      <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <ScoreCard score={score} total={deck.length} onRestart={restart} />
       </div>
     );
   }
 
   return (
-    <div className="container mx-auto px-6 py-10 max-w-2xl">
+    <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 max-w-2xl">
       <div className="flex items-center justify-between mb-3 text-sm text-muted-foreground">
         <span>
           Savol {index + 1} / {deck.length}
@@ -74,7 +74,7 @@ function MultipleChoice() {
       </div>
       <ProgressBar value={index} max={deck.length} />
 
-      <div className="mt-10 p-8 md:p-10 rounded-3xl bg-gradient-card border border-border/60 shadow-elegant animate-fade-in-up">
+      <div className="mt-6 sm:mt-10 p-5 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl bg-gradient-card border border-border/60 shadow-elegant animate-fade-in-up">
         <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
           {formChoice.label}
         </div>

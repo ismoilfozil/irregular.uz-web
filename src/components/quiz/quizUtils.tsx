@@ -53,12 +53,12 @@ export function ScoreCard({
           : "Yana mashq qiling 💪";
 
   return (
-    <div className="max-w-lg mx-auto text-center p-10 rounded-3xl bg-gradient-card border border-border/60 shadow-elegant animate-fade-in-up">
+    <div className="max-w-lg mx-auto text-center p-6 sm:p-10 rounded-2xl sm:rounded-3xl bg-gradient-card border border-border/60 shadow-elegant animate-fade-in-up">
       <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">Yakun</div>
-      <h2 className="font-display text-5xl font-bold mb-2">
+      <h2 className="font-display text-3xl sm:text-5xl font-bold mb-2">
         {score} / {total}
       </h2>
-      <p className="text-2xl font-display font-semibold mb-1">{pct}%</p>
+      <p className="text-xl sm:text-2xl font-display font-semibold mb-1">{pct}%</p>
       <p className="text-muted-foreground mb-8">{message}</p>
       <button
         onClick={onRestart}

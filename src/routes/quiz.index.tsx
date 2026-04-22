@@ -47,12 +47,12 @@ const modes = [
 
 function QuizHub() {
   return (
-    <div className="container mx-auto px-6 py-12 md:py-16">
-      <div className="max-w-3xl mb-12">
+    <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+      <div className="max-w-3xl mb-8 sm:mb-12">
         <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
           Mashqlar
         </div>
-        <h1 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-balance">
+        <h1 className="font-display text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-balance">
           Quiz rejimi tanlang
         </h1>
         <p className="mt-4 text-muted-foreground text-lg">
@@ -61,14 +61,14 @@ function QuizHub() {
         </p>
       </div>
 
-      <div className="grid md:grid-cols-2 gap-5">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
         {modes.map((m) => {
           const Icon = m.icon;
           return (
             <Link
               key={m.to}
               to={m.to}
-              className="group relative overflow-hidden rounded-2xl bg-card border border-border/60 p-8 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl bg-card border border-border/60 p-5 sm:p-8 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300"
             >
               <div
                 className={`absolute -top-12 -right-12 w-40 h-40 rounded-full bg-gradient-to-br ${m.accent} opacity-20 group-hover:opacity-40 group-hover:scale-110 transition-all duration-500`}

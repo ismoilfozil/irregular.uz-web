@@ -63,7 +63,7 @@ function Index() {
           }}
         />
 
-        <div className="relative container mx-auto px-6 py-24 md:py-36">
+        <div className="relative container mx-auto px-4 sm:px-6 py-16 sm:py-24 md:py-36">
           <div className="max-w-3xl">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-sm text-white/90 mb-8 animate-fade-in-up">
               <Sparkles className="w-4 h-4" />
@@ -71,7 +71,7 @@ function Index() {
             </div>
 
             <h1
-              className="font-display text-5xl md:text-7xl font-extrabold text-white leading-[1.05] tracking-tight text-balance animate-fade-in-up"
+              className="font-display text-3xl sm:text-5xl md:text-7xl font-extrabold text-white leading-[1.05] tracking-tight text-balance animate-fade-in-up"
               style={{ animationDelay: "0.1s" }}
             >
               Noto'g'ri fe'llarni{" "}
@@ -82,7 +82,7 @@ function Index() {
             </h1>
 
             <p
-              className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl animate-fade-in-up"
+              className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-white/80 max-w-2xl animate-fade-in-up"
               style={{ animationDelay: "0.2s" }}
             >
               {uniqueVerbs.length}+ ingliz tilidagi noto'g'ri fe'l, har biri uch shakli va o'zbekcha
@@ -90,40 +90,40 @@ function Index() {
             </p>
 
             <div
-              className="mt-10 flex flex-wrap gap-4 animate-fade-in-up"
+              className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4 animate-fade-in-up"
               style={{ animationDelay: "0.3s" }}
             >
               <Link
                 to="/quiz"
-                className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-primary font-semibold hover:bg-white/90 transition-all shadow-elegant hover:shadow-glow"
+                className="group inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white text-primary font-semibold text-sm sm:text-base hover:bg-white/90 transition-all shadow-elegant hover:shadow-glow"
               >
                 Mashqni boshlash
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 to="/verbs"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold hover:bg-white/20 transition-colors"
+                className="inline-flex items-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold text-sm sm:text-base hover:bg-white/20 transition-colors"
               >
                 Fe'llar ro'yxati
               </Link>
             </div>
 
             <div
-              className="mt-14 grid grid-cols-3 gap-6 max-w-lg animate-fade-in-up"
+              className="mt-10 sm:mt-14 grid grid-cols-3 gap-4 sm:gap-6 max-w-lg animate-fade-in-up"
               style={{ animationDelay: "0.4s" }}
             >
               <div>
-                <div className="font-display text-3xl md:text-4xl font-bold text-white">
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">
                   {uniqueVerbs.length}+
                 </div>
                 <div className="text-sm text-white/70 mt-1">Fe'llar</div>
               </div>
               <div>
-                <div className="font-display text-3xl md:text-4xl font-bold text-white">4</div>
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">4</div>
                 <div className="text-sm text-white/70 mt-1">Quiz turi</div>
               </div>
               <div>
-                <div className="font-display text-3xl md:text-4xl font-bold text-white">100%</div>
+                <div className="font-display text-2xl sm:text-3xl md:text-4xl font-bold text-white">100%</div>
                 <div className="text-sm text-white/70 mt-1">Bepul</div>
               </div>
             </div>
@@ -132,23 +132,23 @@ function Index() {
       </section>
 
       {/* Features */}
-      <section className="container mx-auto px-6 py-24">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-24">
         <div className="max-w-2xl mb-14">
           <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
             Imkoniyatlar
           </div>
-          <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight text-balance">
+          <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight text-balance">
             Yodlashni qiziqarli qiladigan to'liq to'plam
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
           {features.map((f, i) => {
             const Icon = f.icon;
             return (
               <div
                 key={f.title}
-                className="group relative p-7 rounded-2xl bg-gradient-card border border-border/60 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
+                className="group relative p-5 sm:p-7 rounded-2xl bg-gradient-card border border-border/60 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${i * 0.05}s` }}
               >
                 <div className="w-12 h-12 rounded-xl bg-gradient-accent flex items-center justify-center mb-5 shadow-glow group-hover:scale-110 transition-transform">
@@ -163,14 +163,14 @@ function Index() {
       </section>
 
       {/* Sample verbs preview */}
-      <section className="container mx-auto px-6 pb-24">
+      <section className="container mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
         <div className="rounded-3xl bg-gradient-card border border-border/60 shadow-elegant overflow-hidden">
-          <div className="p-8 md:p-12 flex flex-wrap items-end justify-between gap-6 border-b border-border/60">
+          <div className="p-5 sm:p-8 md:p-12 flex flex-wrap items-end justify-between gap-4 sm:gap-6 border-b border-border/60">
             <div>
               <div className="text-sm font-semibold text-accent uppercase tracking-wider mb-3">
                 Misol uchun
               </div>
-              <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">
+              <h2 className="font-display text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight">
                 Eng asosiy fe'llar
               </h2>
             </div>
@@ -181,31 +181,35 @@ function Index() {
               Hammasini ko'rish <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
-          <div className="grid grid-cols-4 px-8 md:px-12 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-secondary/40">
-            <div>V1 (Base)</div>
-            <div>V2 (Past)</div>
-            <div>V3 (Participle)</div>
-            <div>O'zbekcha</div>
-          </div>
-          <div className="divide-y divide-border/60">
-            {uniqueVerbs.slice(0, 7).map((v) => (
-              <div
-                key={v.base}
-                className="grid grid-cols-4 px-8 md:px-12 py-4 hover:bg-secondary/30 transition-colors"
-              >
-                <div className="font-display font-semibold">{v.base}</div>
-                <div className="text-foreground/80">{v.past}</div>
-                <div className="text-foreground/80">{v.participle}</div>
-                <div className="text-muted-foreground italic">{v.uz}</div>
+          <div className="overflow-x-auto">
+            <div className="min-w-[480px]">
+              <div className="grid grid-cols-4 px-5 sm:px-8 md:px-12 py-4 text-xs font-semibold uppercase tracking-wider text-muted-foreground bg-secondary/40">
+                <div>V1 (Base)</div>
+                <div>V2 (Past)</div>
+                <div>V3 (Participle)</div>
+                <div>O'zbekcha</div>
               </div>
-            ))}
+              <div className="divide-y divide-border/60">
+                {uniqueVerbs.slice(0, 7).map((v) => (
+                  <div
+                    key={v.base}
+                    className="grid grid-cols-4 px-5 sm:px-8 md:px-12 py-3 sm:py-4 hover:bg-secondary/30 transition-colors text-sm sm:text-base"
+                  >
+                    <div className="font-display font-semibold">{v.base}</div>
+                    <div className="text-foreground/80">{v.past}</div>
+                    <div className="text-foreground/80">{v.participle}</div>
+                    <div className="text-muted-foreground italic">{v.uz}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="container mx-auto px-6 pb-24">
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-hero p-12 md:p-16 text-center shadow-elegant">
+      <section className="container mx-auto px-4 sm:px-6 pb-16 sm:pb-24">
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-hero p-8 sm:p-12 md:p-16 text-center shadow-elegant">
           <div
             className="absolute inset-0 opacity-30"
             style={{
@@ -214,7 +218,7 @@ function Index() {
             }}
           />
           <div className="relative">
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-white text-balance">
+            <h2 className="font-display text-2xl sm:text-4xl md:text-5xl font-bold text-white text-balance">
               Tayyormisiz? Birinchi quizni boshlang
             </h2>
             <p className="mt-4 text-white/80 max-w-xl mx-auto">

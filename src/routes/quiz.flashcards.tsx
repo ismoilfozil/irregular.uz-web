@@ -27,9 +27,9 @@ function Flashcards() {
   };
 
   return (
-    <div className="container mx-auto px-6 py-10 max-w-2xl">
-      <div className="flex items-center justify-between mb-6">
-        <h1 className="font-display text-2xl md:text-3xl font-bold">Flashcards</h1>
+    <div className="container mx-auto px-4 sm:px-6 py-8 sm:py-10 max-w-2xl">
+      <div className="flex items-center justify-between mb-4 sm:mb-6">
+        <h1 className="font-display text-xl sm:text-2xl md:text-3xl font-bold">Flashcards</h1>
         <span className="text-sm text-muted-foreground">
           {index + 1} / {deck.length}
         </span>
@@ -37,7 +37,7 @@ function Flashcards() {
 
       <div
         onClick={() => setFlipped((f) => !f)}
-        className="relative w-full h-80 cursor-pointer mb-8"
+        className="relative w-full h-60 sm:h-80 cursor-pointer mb-6 sm:mb-8"
         style={{ perspective: "1200px" }}
       >
         <div
@@ -49,13 +49,13 @@ function Flashcards() {
         >
           {/* Front */}
           <div
-            className="absolute inset-0 rounded-3xl bg-gradient-hero text-white shadow-elegant flex flex-col items-center justify-center p-8"
+            className="absolute inset-0 rounded-3xl bg-gradient-hero text-white shadow-elegant flex flex-col items-center justify-center p-6 sm:p-8"
             style={{ backfaceVisibility: "hidden" }}
           >
-            <div className="text-sm font-semibold text-white/70 uppercase tracking-wider mb-4">
+            <div className="text-xs sm:text-sm font-semibold text-white/70 uppercase tracking-wider mb-3 sm:mb-4">
               V1 — Base
             </div>
-            <div className="font-display text-6xl font-extrabold mb-3 text-balance text-center">
+            <div className="font-display text-4xl sm:text-6xl font-extrabold mb-3 text-balance text-center">
               {verb.base}
             </div>
             <div className="text-white/70 italic mt-4">Aylantiring →</div>
@@ -63,7 +63,7 @@ function Flashcards() {
 
           {/* Back */}
           <div
-            className="absolute inset-0 rounded-3xl bg-gradient-card border border-border shadow-elegant p-8 flex flex-col justify-center"
+            className="absolute inset-0 rounded-3xl bg-gradient-card border border-border shadow-elegant p-5 sm:p-8 flex flex-col justify-center"
             style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
           >
             <div className="space-y-5">
@@ -78,13 +78,13 @@ function Flashcards() {
         </div>
       </div>
 
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex items-center justify-between gap-2 sm:gap-3">
         <button
           onClick={prev}
           disabled={index === 0}
-          className="flex items-center gap-2 px-5 py-3 rounded-full bg-secondary border border-border text-sm font-semibold disabled:opacity-40 hover:bg-secondary/80 transition-colors"
+          className="flex items-center gap-1 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-full bg-secondary border border-border text-xs sm:text-sm font-semibold disabled:opacity-40 hover:bg-secondary/80 transition-colors"
         >
-          <ChevronLeft className="w-4 h-4" /> Oldingi
+          <ChevronLeft className="w-4 h-4" /> <span className="hidden sm:inline">Oldingi</span>
         </button>
 
         <button
@@ -93,17 +93,17 @@ function Flashcards() {
             setIndex(0);
             setFlipped(false);
           }}
-          className="flex items-center gap-2 px-5 py-3 rounded-full bg-secondary border border-border text-sm font-semibold hover:bg-secondary/80 transition-colors"
+          className="flex items-center gap-1 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-full bg-secondary border border-border text-xs sm:text-sm font-semibold hover:bg-secondary/80 transition-colors"
         >
-          <RotateCcw className="w-4 h-4" /> Aralashtirish
+          <RotateCcw className="w-4 h-4" /> <span className="hidden sm:inline">Aralashtirish</span>
         </button>
 
         <button
           onClick={next}
           disabled={index === deck.length - 1}
-          className="flex items-center gap-2 px-5 py-3 rounded-full bg-primary text-primary-foreground text-sm font-semibold disabled:opacity-40 hover:bg-primary/90 transition-colors shadow-soft"
+          className="flex items-center gap-1 sm:gap-2 px-3 sm:px-5 py-2.5 sm:py-3 rounded-full bg-primary text-primary-foreground text-xs sm:text-sm font-semibold disabled:opacity-40 hover:bg-primary/90 transition-colors shadow-soft"
         >
-          Keyingi <ChevronRight className="w-4 h-4" />
+          <span className="hidden sm:inline">Keyingi</span> <ChevronRight className="w-4 h-4" />
         </button>
       </div>
     </div>

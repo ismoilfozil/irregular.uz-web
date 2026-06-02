@@ -4,16 +4,6 @@ import { uniqueVerbs } from "@/data/verbs";
 
 export const Route = createFileRoute("/")({
   component: Index,
-  head: () => ({
-    meta: [
-      { title: "Irregular.uz — Noto'g'ri fe'llarni oson o'rganing" },
-      {
-        name: "description",
-        content:
-          "Ingliz tilidagi 150+ noto'g'ri fe'llarni o'zbekcha tarjimasi va 4 xil quiz bilan mukammal o'zlashtiring.",
-      },
-    ],
-  }),
 });
 
 const features = [

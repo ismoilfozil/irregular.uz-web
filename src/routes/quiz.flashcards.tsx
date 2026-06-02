@@ -6,7 +6,6 @@ import { uniqueVerbs } from "@/data/verbs";
 
 export const Route = createFileRoute("/quiz/flashcards")({
   component: Flashcards,
-  head: () => ({ meta: [{ title: "Flashcards — Irregular.uz" }] }),
 });
 
 function Flashcards() {

@@ -5,16 +5,6 @@ import { uniqueVerbs } from "@/data/verbs";
 
 export const Route = createFileRoute("/verbs")({
   component: VerbsPage,
-  head: () => ({
-    meta: [
-      { title: "Fe'llar ro'yxati — Irregular.uz" },
-      {
-        name: "description",
-        content:
-          "150+ ingliz tilidagi noto'g'ri fe'llarning 3 shakli va o'zbekcha tarjimasi. Qidiruv bilan oson topish.",
-      },
-    ],
-  }),
 });
 
 function VerbsPage() {

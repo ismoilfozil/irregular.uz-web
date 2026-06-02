@@ -3,15 +3,6 @@ import { Brain, Keyboard, Layers, Shuffle, ArrowRight } from "lucide-react";
 
 export const Route = createFileRoute("/quiz/")({
   component: QuizHub,
-  head: () => ({
-    meta: [
-      { title: "Quizlar — Irregular.uz" },
-      {
-        name: "description",
-        content: "4 xil quiz rejimi: multiple choice, yozish, matching va flashcards.",
-      },
-    ],
-  }),
 });
 
 const modes = [

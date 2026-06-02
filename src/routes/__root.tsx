@@ -1,6 +1,4 @@
-import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/react-router";
-
-import appCss from "../styles.css?url";
+import { Outlet, Link, createRootRoute } from "@tanstack/react-router";
 import { SiteLayout } from "../components/SiteLayout";
 
 function NotFoundComponent() {
@@ -26,56 +24,9 @@ function NotFoundComponent() {
 }
 
 export const Route = createRootRoute({
-  head: () => ({
-    meta: [
-      { charSet: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Irregular.uz — Ingliz tilidagi noto'g'ri fe'llar" },
-      { name: "description", content: "150+ ingliz tilidagi noto'g'ri fe'llarni 3 shakli va o'zbekcha tarjimasi bilan o'rganing. Quiz, flashcard va matching mashqlari." },
-      { name: "author", content: "Irregular.uz" },
-      { property: "og:title", content: "Irregular.uz — Ingliz tilidagi noto'g'ri fe'llar" },
-      { property: "og:description", content: "Noto'g'ri fe'llarni o'zbek tarjimasi bilan o'rganing va quizlar yordamida mashq qiling." },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
-    ],
-    links: [
-      {
-        rel: "stylesheet",
-        href: appCss,
-      },
-    ],
-    scripts: [
-      {
-        src: "https://www.googletagmanager.com/gtag/js?id=G-P9J1HRZ2RV",
-        async: true,
-      },
-      {
-        children: `window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-P9J1HRZ2RV');`,
-      },
-    ],
-  }),
-  shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
 });
-
-function RootShell({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="en">
-      <head>
-        <HeadContent />
-      </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
-    </html>
-  );
-}
 
 function RootComponent() {
   return <SiteLayout />;

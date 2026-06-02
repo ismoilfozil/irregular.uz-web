@@ -6,7 +6,6 @@ import { uniqueVerbs, type IrregularVerb } from "@/data/verbs";
 
 export const Route = createFileRoute("/quiz/matching")({
   component: MatchingQuiz,
-  head: () => ({ meta: [{ title: "Matching quiz — Irregular.uz" }] }),
 });
 
 const PAIR_COUNT = 6;

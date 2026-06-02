@@ -11,9 +11,6 @@ import {
 
 export const Route = createFileRoute("/quiz/multiple-choice")({
   component: MultipleChoice,
-  head: () => ({
-    meta: [{ title: "Multiple Choice — Quiz" }],
-  }),
 });
 
 const FORMS = [

@@ -5,7 +5,6 @@ import { ProgressBar, ScoreCard, useQuizDeck } from "@/components/quiz/quizUtils
 
 export const Route = createFileRoute("/quiz/typing")({
   component: TypingQuiz,
-  head: () => ({ meta: [{ title: "Yozish quiz — Irregular.uz" }] }),
 });
 
 const FORMS = [
